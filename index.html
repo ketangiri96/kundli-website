@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Kundli Generator</title>
+</head>
+<body>
+
+<h1>Free Kundli Generator</h1>
+
+<form id="kundliForm">
+  Name:<br>
+  <input type="text" id="name"><br><br>
+
+  Date of Birth:<br>
+  <input type="date" id="dob"><br><br>
+
+  Time:<br>
+  <input type="time" id="time"><br><br>
+
+  Place:<br>
+  <input type="text" id="place"><br><br>
+
+  <button type="submit">Generate Kundli</button>
+</form>
+
+<h2 id="result"></h2>
+
+<script>
+document.getElementById("kundliForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  let name = document.getElementById("name").value;
+
+  document.getElementById("result").innerHTML =
+    "Hello " + name + ", your kundli will be generated here soon!";
+});
+</script>
+
+</body>
+</html>
